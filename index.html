@@ -385,7 +385,19 @@
                         </a>
                     </li>
                 </ul>
-             </div>
+            </div>
+            <div class="footer-inner">
+                <p class="form-footer-text">Підпишіться на розсилку</p>
+                <form class="footer-form">
+                    <input type="email" name="footer-email" required class="footer-form-input"   placeholder="E-mail">
+                    <div class="form-field-footer">
+                        <button type="submit" class="footer-form-submit">Підписатися</button>
+                        <svg class="footer-form-submit-icon">
+                            <use href="./images/sprite.svg#icon-icon-send" ></use>
+                        </svg>
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
  <div class="backdrope is-hidden" data-modal >
@@ -397,14 +409,14 @@
         </button>
         <form class="modal-form">
             <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-            <label for="" class="modal-form-field">
+            <label for="" class="modal-form-field" >
                 <span class="modal-form-input-desc">Ім'я</span>
                 <span class="modal-form-input-wrapper">
-                    <input type="text"
+                    <input type="text" 
                        name="user_name" 
                        class="modal-form-input"
                        required 
-                       pattern="[a-zA-Zа-яА-Я]+"
+                       pattern="^[a-z0-9_-]{3,16}$"
                        minlenght="2">
                     <svg class="modal-form-input-icon">
                         <use href="./images/sprite.svg#icon-person-black"></use>
@@ -419,7 +431,7 @@
                        name="user_phone" 
                        class="modal-form-input"
                        required 
-                       pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                       pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}">
                     <svg class="modal-form-input-icon">
                         <use href="./images/sprite.svg#icon-phone-black"></use>
                     </svg>
@@ -428,8 +440,8 @@
             <label for="" class="modal-form-field">
                 <span class="modal-form-input-desc">Пошта</span>
                 <span class="modal-form-input-wrapper">
-                    <input type="mail" 
-                       name="user_mail" 
+                    <input type="email" 
+                       name="user_email" 
                        class="modal-form-input"
                        required> 
                     <svg class="modal-form-input-icon">
@@ -445,12 +457,15 @@
                 id="" 
                 placeholder="Введіть текст"></textarea>
             </label>
-            <input  class="modal-form-check"
+            <input  class="modal-form-check visually-hidden "
                     id="user_policy"
                     type="checkbox"
                     name="user_policy">
-            <label for="user_policy" class="modal-form-check-desc">Погоджуюся з розсилкою та приймаю </label>
-            <a href="">Умови договору</a>
+            <label for="user_policy" class="modal-form-check-desc">
+                Погоджуюся з розсилкою та приймаю&nbsp; 
+                <a href="#" class="modal-form-check-link">Умови договору</a>
+            </label>
+            
             <button type="submit" class="modal-form-submit">Відправити</button>
 
 
